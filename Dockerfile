@@ -1,4 +1,4 @@
-FROM oven/bun as builder
+FROM oven/bun
 
 LABEL org.opencontainers.image.authors="architect-team"
 LABEL org.opencontainers.image.source="https://github.com/architect-team/s3cmd.git"
