@@ -6,7 +6,8 @@ LABEL org.opencontainers.image.url="https://github.com/architect-team/s3cmd"
 
 COPY ./entrypoint .
 
-RUN bun build ./index.ts --compile --outfile ./docker-entrypoint
+RUN bun install \
+  && bun build ./index.ts --compile --outfile ./docker-entrypoint
 
 RUN apt-get update \
   && apt-get install -y python3.6 pip \
