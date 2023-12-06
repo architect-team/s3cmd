@@ -14,3 +14,6 @@ RUN apt-get update \
   && pip install s3cmd
 
 COPY .s3cfg .s3cfg
+
+ENTRYPOINT [ "./docker-entrypoint" ]
+CMD [ "--help" ]
